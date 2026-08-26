@@ -1,0 +1,625 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="robots" content="noindex, nofollow">
+<meta name="theme-color" content="#ffffff" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#0d131b" media="(prefers-color-scheme: dark)">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="사회 시나리오">
+<title>사회 시나리오 · 2027학년도 대입전형 안내 교사설명회</title>
+<link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.css">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='88'%3E🎤%3C/text%3E%3C/svg%3E">
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --fs:17px;
+  --bg:#f4f5f7; --card:#ffffff; --card2:#fafbfc;
+  --ink:#15202b; --ink2:#4a5765; --ink3:#8894a3;
+  --line:#e3e7ec; --line2:#eef1f4;
+  --brand:#1e4b8f; --brand-ink:#ffffff; --brand-soft:#eaf1fb;
+  --accent:#a8500c; --accent-soft:#fdf2e6;
+  --live:#0d7f47; --live-soft:#e4f5ec;
+  --shadow:0 1px 2px rgba(16,32,54,.06),0 6px 18px rgba(16,32,54,.05);
+  --hdr:58px; --nav:60px;
+}
+@media (prefers-color-scheme:dark){
+  :root:not([data-theme="light"]){
+    --bg:#0d131b; --card:#161e29; --card2:#1c2532;
+    --ink:#e9eef4; --ink2:#a9b6c5; --ink3:#788593;
+    --line:#27323f; --line2:#212b38;
+    --brand:#7fb2f2; --brand-ink:#0d131b; --brand-soft:#1a2739;
+    --accent:#e8a55e; --accent-soft:#2b2318;
+    --live:#4ed692; --live-soft:#12291f;
+    --shadow:0 1px 2px rgba(0,0,0,.45),0 6px 18px rgba(0,0,0,.32);
+  }
+}
+:root[data-theme="dark"]{
+  --bg:#0d131b; --card:#161e29; --card2:#1c2532;
+  --ink:#e9eef4; --ink2:#a9b6c5; --ink3:#788593;
+  --line:#27323f; --line2:#212b38;
+  --brand:#7fb2f2; --brand-ink:#0d131b; --brand-soft:#1a2739;
+  --accent:#e8a55e; --accent-soft:#2b2318;
+  --live:#4ed692; --live-soft:#12291f;
+  --shadow:0 1px 2px rgba(0,0,0,.45),0 6px 18px rgba(0,0,0,.32);
+}
+html{-webkit-text-size-adjust:100%;text-size-adjust:100%}
+body{
+  font-family:"Pretendard Variable",Pretendard,-apple-system,BlinkMacSystemFont,"Apple SD Gothic Neo","Malgun Gothic","Noto Sans KR",system-ui,sans-serif;
+  background:var(--bg); color:var(--ink);
+  font-size:var(--fs); line-height:1.75;
+  word-break:keep-all; overflow-wrap:break-word;
+  -webkit-font-smoothing:antialiased;
+  padding-top:calc(var(--hdr) + env(safe-area-inset-top));
+  padding-bottom:calc(var(--nav) + env(safe-area-inset-bottom));
+}
+
+/* ── header ───────────────────────────────── */
+header{
+  position:fixed; top:0; left:0; right:0; z-index:60;
+  padding-top:env(safe-area-inset-top);
+  background:var(--card);
+  border-bottom:1px solid var(--line);
+}
+@supports (backdrop-filter:blur(1px)){
+  header{background:color-mix(in srgb,var(--card) 86%,transparent);backdrop-filter:saturate(180%) blur(14px);-webkit-backdrop-filter:saturate(180%) blur(14px)}
+}
+.hbar{height:var(--hdr);display:flex;align-items:center;gap:9px;padding:0 13px}
+.htitle{flex:1;min-width:0}
+.htitle b{display:block;font-size:.94rem;font-weight:700;letter-spacing:-.025em;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.htitle span{display:block;font-size:.67rem;color:var(--ink3);white-space:nowrap;overflow:hidden;text-overflow:ellipsis;line-height:1.4}
+#clock{
+  font-variant-numeric:tabular-nums;font-weight:700;font-size:.85rem;
+  padding:5px 9px;border-radius:10px;background:var(--brand-soft);color:var(--brand);
+  white-space:nowrap;flex:none;letter-spacing:-.02em;
+}
+.iconbtn{
+  width:38px;height:38px;flex:none;display:grid;place-items:center;
+  border:1px solid var(--line);border-radius:11px;background:var(--card2);
+  color:var(--ink2);font-family:inherit;font-size:.86rem;font-weight:800;cursor:pointer;
+  -webkit-tap-highlight-color:transparent;
+}
+.iconbtn:active{transform:scale(.93)}
+.iconbtn[aria-expanded="true"]{background:var(--brand);border-color:var(--brand);color:var(--brand-ink)}
+
+#settings{display:none;border-top:1px solid var(--line2);padding:12px 13px 14px}
+#settings.open{display:block}
+.setrow{display:flex;align-items:center;gap:10px}
+.setrow+.setrow{margin-top:9px}
+.setrow>b{font-size:.72rem;color:var(--ink3);width:44px;flex:none;font-weight:700}
+.seg{display:flex;flex:1;gap:4px;background:var(--bg);border-radius:11px;padding:4px}
+.seg button{
+  flex:1;min-height:34px;border:0;border-radius:8px;background:transparent;
+  color:var(--ink2);font-family:inherit;font-size:.78rem;font-weight:600;cursor:pointer;
+  -webkit-tap-highlight-color:transparent;
+}
+.seg button[aria-pressed="true"]{background:var(--brand);color:var(--brand-ink);box-shadow:var(--shadow)}
+
+/* ── layout ───────────────────────────────── */
+main{max-width:720px;margin:0 auto;padding:14px 14px 30px}
+.panel{display:none}
+.panel.on{display:block;animation:fade .2s ease}
+@keyframes fade{from{opacity:0;transform:translateY(5px)}to{opacity:1;transform:none}}
+
+h2.sec{
+  font-size:1rem;font-weight:800;letter-spacing:-.025em;margin:26px 0 11px;
+  display:flex;align-items:center;gap:8px;
+}
+.panel > h2.sec:first-child{margin-top:2px}
+h2.sec::before{content:"";width:4px;height:1.05em;border-radius:3px;background:var(--brand);flex:none}
+.lead{color:var(--ink2);font-size:.83rem;margin:-4px 0 13px;line-height:1.65}
+
+.card{background:var(--card);border:1px solid var(--line);border-radius:16px;box-shadow:var(--shadow);overflow:hidden}
+.card+.card{margin-top:11px}
+
+.info{list-style:none}
+.info li{display:flex;gap:12px;padding:13px 16px;border-bottom:1px solid var(--line2);align-items:flex-start}
+.info li:last-child{border-bottom:0}
+.info b{flex:none;width:72px;font-size:.77rem;font-weight:700;color:var(--ink3);padding-top:.2em}
+.info span{flex:1;font-size:.93rem;font-weight:500}
+.info .em{font-weight:700;color:var(--brand)}
+
+/* ── timeline ─────────────────────────────── */
+.tl{list-style:none}
+.tl li{display:flex;gap:12px;padding:14px 16px;border-bottom:1px solid var(--line2);position:relative}
+.tl li:last-child{border-bottom:0}
+.tl .t{flex:none;width:74px}
+.tl .t em{display:block;font-style:normal;font-variant-numeric:tabular-nums;font-weight:700;font-size:.84rem;letter-spacing:-.035em}
+.tl .t i{display:block;font-style:normal;font-size:.69rem;color:var(--ink3);margin-top:1px}
+.tl .b{flex:1;min-width:0}
+.tl .b strong{display:block;font-size:.93rem;font-weight:700;letter-spacing:-.015em}
+.tl .b small{display:block;font-size:.75rem;color:var(--ink3);margin-top:2px;line-height:1.55}
+.tl li.live{background:var(--live-soft)}
+.tl li.live::before{content:"";position:absolute;left:0;top:0;bottom:0;width:3px;background:var(--live)}
+.tl li.live .t em{color:var(--live)}
+.tl li.past{opacity:.45}
+
+/* ── quick-jump chips ─────────────────────── */
+.chips{
+  position:sticky; top:calc(var(--hdr) + env(safe-area-inset-top)); z-index:40;
+  display:flex;gap:7px;overflow-x:auto;padding:10px 14px 11px;margin:-14px -14px 6px;
+  background:var(--bg);
+  scrollbar-width:none;-webkit-overflow-scrolling:touch;
+}
+@supports (backdrop-filter:blur(1px)){
+  .chips{background:color-mix(in srgb,var(--bg) 88%,transparent);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px)}
+}
+.chips::-webkit-scrollbar{display:none}
+.chips button{
+  flex:none;border:1px solid var(--line);background:var(--card);color:var(--ink2);
+  font-family:inherit;font-size:.75rem;font-weight:600;padding:8px 13px;border-radius:999px;
+  white-space:nowrap;cursor:pointer;-webkit-tap-highlight-color:transparent;
+  font-variant-numeric:tabular-nums;letter-spacing:-.01em;
+}
+.chips button.live{background:var(--live);border-color:var(--live);color:#fff}
+
+/* ── script blocks ────────────────────────── */
+.blk{margin-bottom:13px;scroll-margin-top:calc(var(--hdr) + env(safe-area-inset-top) + 60px)}
+.blk>.head{display:flex;align-items:center;gap:9px;padding:13px 15px;background:var(--brand-soft);border-bottom:1px solid var(--line2)}
+.blk>.head .tm{font-variant-numeric:tabular-nums;font-weight:800;font-size:.78rem;color:var(--brand);letter-spacing:-.035em;flex:none}
+.blk>.head .ttl{font-size:.88rem;font-weight:700;letter-spacing:-.02em;flex:1;min-width:0}
+.blk.live>.head{background:var(--live-soft)}
+.blk.live>.head .tm{color:var(--live)}
+.blk.live{outline:2px solid var(--live)}
+.nowtag{flex:none;font-size:.6rem;font-weight:800;letter-spacing:.06em;background:var(--live);color:#fff;padding:3px 7px;border-radius:6px;display:none}
+.blk.live .nowtag{display:block}
+.body{padding:4px 15px 14px}
+
+p.say{margin:12px 0;font-size:1.02em;font-weight:500;line-height:1.85;letter-spacing:-.015em}
+.cue{display:inline-block;font-size:.73em;font-weight:700;color:var(--brand);background:var(--brand-soft);padding:2px 8px;border-radius:6px;margin-right:6px;vertical-align:.1em;white-space:nowrap}
+p.act{margin:14px 0;padding:11px 14px;border-radius:11px;background:var(--card2);border:1px dashed var(--line);color:var(--ink2);font-size:.85em;font-weight:600;text-align:center;letter-spacing:-.01em}
+p.note{margin:13px 0 2px;padding:11px 13px;border-radius:11px;background:var(--accent-soft);border-left:3px solid var(--accent);color:var(--ink2);font-size:.81em;line-height:1.72}
+p.note b{color:var(--accent);font-weight:700}
+
+/* ── accordion ────────────────────────────── */
+details.acc{border-bottom:1px solid var(--line2)}
+details.acc:last-child{border-bottom:0}
+details.acc>summary{list-style:none;cursor:pointer;padding:14px 15px;display:flex;align-items:center;gap:10px;font-size:.9rem;font-weight:700;letter-spacing:-.02em;-webkit-tap-highlight-color:transparent}
+details.acc>summary::-webkit-details-marker{display:none}
+details.acc>summary::after{content:"";flex:none;width:8px;height:8px;margin-left:auto;border-right:2px solid var(--ink3);border-bottom:2px solid var(--ink3);transform:rotate(45deg) translate(-3px,-3px);transition:transform .2s}
+details.acc[open]>summary::after{transform:rotate(225deg) translate(-2px,-2px)}
+details.acc>summary .n{flex:none;width:24px;height:24px;border-radius:8px;background:var(--brand-soft);color:var(--brand);display:grid;place-items:center;font-size:.71rem;font-weight:800}
+details.acc .in{padding:0 15px 16px 49px}
+details.acc .in>*+*{margin-top:9px}
+.quote{background:var(--card2);border-left:3px solid var(--brand);border-radius:0 10px 10px 0;padding:11px 13px;font-size:.89rem;font-weight:600;line-height:1.72}
+.arrow{color:var(--ink2);font-size:.84rem;line-height:1.7}
+.arrow b{color:var(--accent);font-weight:700}
+
+/* ── checklist ────────────────────────────── */
+.ckbar{display:flex;align-items:center;gap:11px;padding:13px 15px;border-bottom:1px solid var(--line2)}
+.ckbar .bar{flex:1;height:7px;border-radius:99px;background:var(--line);overflow:hidden}
+.ckbar .bar i{display:block;height:100%;width:0;background:var(--brand);border-radius:99px;transition:width .25s}
+.ckbar .cnt{font-size:.77rem;font-weight:700;color:var(--ink2);font-variant-numeric:tabular-nums;flex:none}
+.ckbar button{flex:none;border:1px solid var(--line);background:var(--card2);color:var(--ink2);font-family:inherit;font-size:.71rem;font-weight:600;padding:6px 10px;border-radius:9px;cursor:pointer}
+.ck{list-style:none}
+.ck li{border-bottom:1px solid var(--line2)}
+.ck li:last-child{border-bottom:0}
+.ck label{display:flex;gap:12px;align-items:flex-start;padding:13px 15px;cursor:pointer;-webkit-tap-highlight-color:transparent}
+.ck input{appearance:none;-webkit-appearance:none;flex:none;width:24px;height:24px;border:2px solid var(--line);border-radius:8px;background:var(--card2);margin-top:1px;cursor:pointer;position:relative;transition:.15s}
+.ck input:checked{background:var(--brand);border-color:var(--brand)}
+.ck input:checked::after{content:"";position:absolute;left:6.5px;top:2.5px;width:6px;height:11px;border:solid var(--brand-ink);border-width:0 2.5px 2.5px 0;transform:rotate(45deg)}
+.ck .txt{flex:1;font-size:.89rem;line-height:1.65;transition:.15s}
+.ck .when{display:inline-block;font-size:.67rem;font-weight:800;color:var(--accent);background:var(--accent-soft);padding:2px 7px;border-radius:6px;margin-right:6px;vertical-align:.12em;white-space:nowrap}
+.ck input:checked~.txt{color:var(--ink3);text-decoration:line-through}
+
+/* ── bottom nav ───────────────────────────── */
+nav{
+  position:fixed;left:0;right:0;bottom:0;z-index:60;
+  background:var(--card);border-top:1px solid var(--line);
+  padding-bottom:env(safe-area-inset-bottom);display:flex;
+}
+@supports (backdrop-filter:blur(1px)){
+  nav{background:color-mix(in srgb,var(--card) 90%,transparent);backdrop-filter:saturate(180%) blur(14px);-webkit-backdrop-filter:saturate(180%) blur(14px)}
+}
+nav button{
+  flex:1;height:var(--nav);border:0;background:transparent;cursor:pointer;
+  display:flex;flex-direction:column;align-items:center;justify-content:center;gap:3px;
+  color:var(--ink3);font-family:inherit;font-size:.65rem;font-weight:600;
+  -webkit-tap-highlight-color:transparent;
+}
+nav button svg{width:21px;height:21px;stroke:currentColor;fill:none;stroke-width:1.9;stroke-linecap:round;stroke-linejoin:round}
+nav button[aria-selected="true"]{color:var(--brand)}
+nav button:active{opacity:.55}
+
+#top{
+  position:fixed;right:14px;bottom:calc(var(--nav) + env(safe-area-inset-bottom) + 14px);
+  z-index:55;width:44px;height:44px;border-radius:50%;border:1px solid var(--line);
+  background:var(--card);color:var(--ink2);box-shadow:var(--shadow);cursor:pointer;
+  display:none;place-items:center;padding:0;
+}
+#top svg{width:20px;height:20px;stroke:currentColor;fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+#top.show{display:grid}
+
+.foot{text-align:center;color:var(--ink3);font-size:.7rem;margin-top:24px;line-height:1.75}
+@media (min-width:640px){:root{--hdr:62px}.info b{width:86px}}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="hbar">
+    <div class="htitle">
+      <b>사회 시나리오</b>
+      <span>2027학년도 대입전형 안내 교사설명회</span>
+    </div>
+    <div id="clock">--:--</div>
+    <button class="iconbtn" id="setBtn" aria-expanded="false" aria-label="보기 설정">Aa</button>
+  </div>
+  <div id="settings">
+    <div class="setrow">
+      <b>글자</b>
+      <div class="seg" id="fsSeg">
+        <button data-fs="15">작게</button>
+        <button data-fs="17">보통</button>
+        <button data-fs="19">크게</button>
+        <button data-fs="21.5">아주 크게</button>
+      </div>
+    </div>
+    <div class="setrow">
+      <b>화면</b>
+      <div class="seg" id="thSeg">
+        <button data-th="auto">자동</button>
+        <button data-th="light">밝게</button>
+        <button data-th="dark">어둡게</button>
+      </div>
+    </div>
+  </div>
+</header>
+
+<main>
+
+<!-- ══════════ 대본 ══════════ -->
+<section class="panel on" id="p-script" role="tabpanel" aria-labelledby="t-script">
+  <div class="chips" id="chips"></div>
+
+  <article class="card blk" id="s1" data-from="900" data-to="925">
+    <div class="head"><span class="tm">15:00</span><span class="ttl">식전 안내</span><span class="nowtag">진행중</span></div>
+    <div class="body">
+      <p class="act">등록 진행 중 · 10분 간격 2~3회 반복</p>
+      <p class="say">안녕하십니까. 울산대학교 입학관리팀입니다.</p>
+      <p class="say">오늘 「2027학년도 대입전형 안내 교사설명회」에 참석해 주신 선생님들께 진심으로 감사드립니다.</p>
+      <p class="say">현재 등록을 진행하고 있습니다. 아직 등록하지 않으신 선생님께서는 입구 등록대에서 소속 학교와 성함을 확인해 주시고, 자료집을 받아 편한 자리에 앉아주시기 바랍니다.</p>
+      <p class="say">설명회는 오후 3시 30분에 시작하겠습니다. 감사합니다.</p>
+      <p class="note"><b>※</b> 음료·다과 위치, 화장실 위치, 주차 등록 방법 등 현장 안내 사항이 있으면 이 멘트 뒤에 덧붙여 안내.</p>
+    </div>
+  </article>
+
+  <article class="card blk" id="s2" data-from="925" data-to="930">
+    <div class="head"><span class="tm">15:25</span><span class="ttl">개회 5분 전 안내</span><span class="nowtag">진행중</span></div>
+    <div class="body">
+      <p class="say">선생님들께 안내 말씀드립니다.</p>
+      <p class="say">잠시 후 3시 30분부터 「2027학년도 울산대학교 대입전형 안내 교사설명회」를 시작하겠습니다. 자리에 앉아주시고, 휴대전화는 무음 또는 진동으로 전환해 주시면 감사하겠습니다.</p>
+      <p class="say">아울러 한 가지 안내드립니다. 오늘 대입전형 안내 순서는 부득이하게 참석하지 못하신 선생님들을 위해 영상으로 촬영되어 저희 입학처 홈페이지에 게시될 예정입니다.</p>
+    </div>
+  </article>
+
+  <article class="card blk" id="s3" data-from="930" data-to="933">
+    <div class="head"><span class="tm">15:30</span><span class="ttl">개회 선언</span><span class="nowtag">진행중</span></div>
+    <div class="body">
+      <p class="say"><span class="cue">정시에</span>안녕하십니까.</p>
+      <p class="say">지금부터 울산대학교 「2027학년도 대입전형 안내 교사설명회」를 시작하겠습니다.</p>
+      <p class="say">저는 오늘 행사의 진행을 맡은 울산대학교 입학관리팀장 <b>이상용</b>입니다. 반갑습니다.</p>
+      <p class="say">바쁘신 학사 일정 중에도, 귀한 걸음 해 주신 선생님들까지 깊이 감사드립니다.</p>
+      <p class="say">오늘 설명회는 2027학년도 울산대학교 신입학 전형, 특히 수시모집의 주요 개편 사항을 상세히 안내해 드리기 위해 준비하였습니다.</p>
+      <p class="say">먼저, 저희 대학을 대표하여 <b>김익현 교학부총장님</b>의 인사 말씀이 있겠습니다. 큰 박수로 맞아주시기 바랍니다.</p>
+    </div>
+  </article>
+
+  <article class="card blk" id="s4" data-from="933" data-to="940">
+    <div class="head"><span class="tm">15:30~15:40</span><span class="ttl">인사말 — 교학부총장</span><span class="nowtag">진행중</span></div>
+    <div class="body">
+      <p class="act">인사말 진행 — 5~10분</p>
+      <p class="say"><span class="cue">인사말 종료 후</span>감사합니다. 교학부총장님의 인사 말씀이었습니다. 다시 한번 큰 박수 부탁드립니다.</p>
+    </div>
+  </article>
+
+  <article class="card blk" id="s5" data-from="940" data-to="960">
+    <div class="head"><span class="tm">15:40~16:00</span><span class="ttl">2027학년도 대입전형 안내</span><span class="nowtag">진행중</span></div>
+    <div class="body">
+      <p class="say">이어서 오늘 설명회의 핵심 순서입니다.</p>
+      <p class="say">2027학년도 울산대학교 신입학 대입전형에 대해 안내해 드리겠습니다. 수시모집 주요 개편 사항 위주로 약 20분간 발표가 진행될 예정입니다.</p>
+      <p class="say">발표는 입학관리팀 <b>정다영 과장님</b>이 맡아주시겠습니다. 큰 박수로 맞아주시기 바랍니다.</p>
+      <p class="act">발표 진행 — 20분</p>
+      <p class="say"><span class="cue">발표 종료 후</span>감사합니다.</p>
+      <p class="say">자세한 내용은 배부해 드린 자료집과 저희 입학처 홈페이지의 모집요강에서 다시 확인하실 수 있습니다. 오늘 안내해 드린 내용 중 궁금하신 점은 마지막 질의응답 순서에서 함께 다루겠습니다.</p>
+    </div>
+  </article>
+
+  <article class="card blk" id="s6" data-from="960" data-to="970">
+    <div class="head"><span class="tm">16:00~16:10</span><span class="ttl">재학생 우수 사례 발표</span><span class="nowtag">진행중</span></div>
+    <div class="body">
+      <p class="say">다음 순서입니다.</p>
+      <p class="say">선생님들께서 지도하신 학생들이 대학에 들어와 어떻게 성장하고 있는지, 재학생의 목소리로 직접 들어보는 시간을 마련했습니다.</p>
+      <p class="say">울산대학교 전공멘토단으로 활동하고 있는 공공인재학부 <b>손예솔 학생</b>이 대학 생활과 진로 설계 과정을 발표하겠습니다. 따뜻한 박수로 맞아주시기 바랍니다.</p>
+      <p class="act">발표 진행 — 10분</p>
+      <p class="say"><span class="cue">발표 종료 후</span>네, 감사합니다. 학생의 이야기를 통해 선생님들께서 보내주신 학생들이 잘 성장하고 있다는 것을 확인하실 수 있으셨을 것 같습니다. 발표해 준 손예솔 학생에게 다시 한번 격려의 박수 부탁드립니다.</p>
+    </div>
+  </article>
+
+  <article class="card blk" id="s7" data-from="970" data-to="990">
+    <div class="head"><span class="tm">16:10~16:30</span><span class="ttl">FAQ 및 질의응답</span><span class="nowtag">진행중</span></div>
+    <div class="body">
+      <p class="say">마지막 순서입니다.</p>
+      <p class="say">선생님들께서 현장에서 자주 문의해 주시는 내용을 모아 「2027학년도 대입 관련 FAQ」로 준비했습니다. 먼저 자주 묻는 질문에 대한 답변을 드린 뒤, 남은 시간에는 선생님들의 질문을 직접 받도록 하겠습니다.</p>
+      <p class="say">입학관리팀 <b>정다영 과장님</b>, 부탁드립니다.</p>
+      <p class="act">FAQ 안내 진행 — 10분 내외</p>
+      <p class="say"><span class="cue">FAQ 종료 후</span>감사합니다. 이제 선생님들의 질문을 받겠습니다.</p>
+      <p class="say">질문이 있으신 선생님께서는 손을 들어주시면 마이크를 전달해 드리겠습니다. 소속 학교와 성함을 말씀해 주신 뒤 질문해 주시면 답변드리겠습니다.</p>
+      <p class="note"><b>※ 질문 청취 후 반드시 요약 복창</b><br>“네, ○○고등학교 ○○○ 선생님께서 △△△에 대해 질문 주셨습니다.”<br>— 촬영 영상에 질문이 명확히 남고, 답변자가 정리할 시간을 확보할 수 있음.</p>
+      <p class="say"><span class="cue">종료 5분 전</span>시간 관계상 두 분만 더 질문을 받겠습니다.</p>
+    </div>
+  </article>
+
+  <article class="card blk" id="s8" data-from="990" data-to="1005">
+    <div class="head"><span class="tm">16:30</span><span class="ttl">폐회</span><span class="nowtag">진행중</span></div>
+    <div class="body">
+      <p class="say">이상으로 준비한 순서를 모두 마치겠습니다.</p>
+      <p class="say">오늘 안내해 드린 대입전형 내용은 영상으로 편집하여 저희 입학처 홈페이지에 게시할 예정이오니, 오늘 참석하지 못하신 학교 선생님들과 함께 활용해 주시면 되겠습니다.</p>
+      <p class="say">남은 수시 원서 접수 기간까지 선생님들의 건강과 학생들의 좋은 결실을 기원합니다.</p>
+      <p class="say">이것으로 「2027학년도 울산대학교 대입전형 안내 교사설명회」를 모두 마치겠습니다. 참석해 주셔서 진심으로 감사합니다. 안녕히 가십시오.</p>
+      <p class="note"><b>※ 폐회 후 배경 안내</b><br>“돌아가시는 길에 등록대에서 주차권과 기념품을 수령해 주시기 바랍니다.” 등 현장 사항에 맞춰 안내.</p>
+    </div>
+  </article>
+
+  <p class="foot">Ⅲ. 사회 시나리오 (전체 대본)</p>
+</section>
+
+<!-- ══════════ 순서 ══════════ -->
+<section class="panel" id="p-run" role="tabpanel" aria-labelledby="t-run" hidden>
+  <h2 class="sec">진행 순서 및 사회자 역할</h2>
+  <div class="card">
+    <ul class="tl" id="tl">
+      <li data-from="900" data-to="930"><div class="t"><em>15:00</em><i>30분</i></div><div class="b"><strong>등록</strong><small>입학관리팀 · 식전 안내 방송(2~3회 반복)</small></div></li>
+      <li data-from="930" data-to="940"><div class="t"><em>15:30</em><i>5~10분</i></div><div class="b"><strong>개회 · 인사말</strong><small>교학부총장 · 개회 선언, 내빈 소개</small></div></li>
+      <li data-from="940" data-to="960"><div class="t"><em>15:40</em><i>20분</i></div><div class="b"><strong>2027학년도 대입전형 안내</strong><small>입학관리팀 · 발표자 소개 및 마무리</small></div></li>
+      <li data-from="960" data-to="970"><div class="t"><em>16:00</em><i>10분</i></div><div class="b"><strong>재학생 대학 생활 및 진로 설계 우수 사례 발표</strong><small>전공멘토단 · 발표자 소개 및 마무리</small></div></li>
+      <li data-from="970" data-to="990"><div class="t"><em>16:10</em><i>20분</i></div><div class="b"><strong>2027학년도 대입 관련 FAQ</strong><small>입학관리팀 · 질의응답 진행 · 폐회</small></div></li>
+    </ul>
+  </div>
+  <p class="foot">※ 운영 사정에 따라 프로그램 내용 및 일정이 일부 변경될 수 있음.</p>
+
+  <h2 class="sec">행사 개요</h2>
+  <div class="card">
+    <ul class="info">
+      <li><b>행사명</b><span>2027학년도 울산대학교 대입전형 안내 교사설명회</span></li>
+      <li><b>일시</b><span class="em">2026. 8. 26.(수) 15:00 ~ 16:30</span></li>
+      <li><b>장소</b><span>울산대학교 중앙도서관 창의열람실</span></li>
+      <li><b>참석 대상</b><span>울산·경주(경북)·양산(경남) 지역 고교 교사<br>(3학년 부장, 담임교사, 진로담당 교사 등)</span></li>
+      <li><b>주관</b><span>울산대학교 입학처 입학관리팀</span></li>
+      <li><b>특이사항</b><span>대입전형 안내 순서는 영상 촬영 후 입학처 홈페이지 게시</span></li>
+    </ul>
+  </div>
+  <p class="foot">2026년 고교교육 기여대학 지원사업</p>
+</section>
+
+<!-- ══════════ 대응 ══════════ -->
+<section class="panel" id="p-case" role="tabpanel" aria-labelledby="t-case" hidden>
+  <h2 class="sec">상황별 대응 멘트</h2>
+  <p class="lead">돌발 상황이 생기면 해당 항목을 눌러 멘트를 바로 확인하세요.</p>
+  <div class="card">
+
+    <details class="acc"><summary><span class="n">1</span>개회 시각에 참석자가 적을 때</summary>
+      <div class="in">
+        <p class="quote">“조금 늦게 도착하시는 선생님들이 계셔서, 5분 정도 여유를 두고 3시 35분에 시작하겠습니다.”</p>
+        <p class="arrow">→ <b>최대 5분까지만</b> 지연, 이후 정시 진행 원칙.</p>
+      </div>
+    </details>
+
+    <details class="acc"><summary><span class="n">2</span>행사 중 늦게 입장하실 때</summary>
+      <div class="in">
+        <p class="arrow">별도 언급 없이 진행. 담당 직원이 뒷좌석으로 안내하고 자료집 전달.</p>
+      </div>
+    </details>
+
+    <details class="acc"><summary><span class="n">3</span>발표가 예정보다 길어질 때</summary>
+      <div class="in">
+        <p class="arrow">발표자에게 <b>“5분 남았습니다”</b> 수신호 또는 메모 전달.</p>
+        <p class="arrow">→ 질의응답 시간을 우선 확보하고, 세부 내용은 자료집 안내로 대체.</p>
+      </div>
+    </details>
+
+    <details class="acc"><summary><span class="n">4</span>질문이 나오지 않을 때</summary>
+      <div class="in">
+        <p class="quote">“그럼 제가 설명회 준비 과정에서 가장 많이 받았던 질문을 하나 대신 드리겠습니다.”</p>
+        <p class="arrow">→ 사전 준비 질문 <b>1~2개 투입</b>.</p>
+        <p class="quote">“학생부 기재나 원서 접수 일정 관련해서도 편하게 질문 주셔도 좋습니다.”</p>
+      </div>
+    </details>
+
+    <details class="acc"><summary><span class="n">5</span>질문이 많아 시간이 초과될 때</summary>
+      <div class="in">
+        <p class="quote">“시간 관계상 이번 질문을 마지막으로 하겠습니다. 남은 질문은 폐회 후 앞쪽 안내 데스크에서 개별적으로 답변드리겠습니다.”</p>
+      </div>
+    </details>
+
+    <details class="acc"><summary><span class="n">6</span>답변이 어려운 질문일 때</summary>
+      <div class="in">
+        <p class="quote">“정확한 확인이 필요한 사항입니다. 소속 학교와 연락처를 남겨주시면 확인 후 개별적으로 회신드리겠습니다.”</p>
+        <p class="arrow">→ <b>즉답·추측 금지.</b></p>
+      </div>
+    </details>
+
+    <details class="acc"><summary><span class="n">7</span>마이크·PPT 등 장비 문제</summary>
+      <div class="in">
+        <p class="quote">“잠시 기술적인 문제가 있어 확인 중입니다. 1~2분만 양해 부탁드립니다.”</p>
+        <p class="arrow">→ 복구 지연 시 다음 순서를 먼저 진행하고 순서 조정.</p>
+      </div>
+    </details>
+
+    <details class="acc"><summary><span class="n">8</span>촬영 관련 문의가 있을 때</summary>
+      <div class="in">
+        <p class="quote">“오늘 촬영은 발표자와 화면을 중심으로 진행되며, 참석자 좌석은 촬영되지 않도록 하고 있습니다. 편집 후 입학처 홈페이지에 게시됩니다.”</p>
+      </div>
+    </details>
+
+  </div>
+  <p class="foot">Ⅳ. 상황별 대응 멘트</p>
+</section>
+
+<!-- ══════════ 점검 ══════════ -->
+<section class="panel" id="p-check" role="tabpanel" aria-labelledby="t-check" hidden>
+  <h2 class="sec">사회자 사전 점검 사항</h2>
+  <p class="lead">체크 상태는 이 기기에 자동 저장됩니다.</p>
+  <div class="card">
+    <div class="ckbar">
+      <div class="bar"><i id="ckFill"></i></div>
+      <span class="cnt" id="ckCnt">0 / 8</span>
+      <button id="ckReset" type="button">초기화</button>
+    </div>
+    <ul class="ck" id="ck">
+      <li><label><input type="checkbox" data-k="c1"><span class="txt"><span class="when">1시간 전</span>마이크(무선 2대 이상)·음향·빔프로젝터·발표 자료 최종 점검, 마이크 배터리 여분 확보</span></label></li>
+      <li><label><input type="checkbox" data-k="c2"><span class="txt"><span class="when">1시간 전</span>좌석 배치, 등록대 명부·자료집·필기구, 안내 표지판 확인</span></label></li>
+      <li><label><input type="checkbox" data-k="c3"><span class="txt"><span class="when">30분 전</span>교학부총장님 도착 시각 및 동선 확인, 인사말 소요 시간 재확인</span></label></li>
+      <li><label><input type="checkbox" data-k="c4"><span class="txt"><span class="when">30분 전</span>발표자(입학관리팀·전공멘토단) 성함·소개 문구 최종 확인 → 시나리오 ○○○ 부분 채워 넣기</span></label></li>
+      <li><label><input type="checkbox" data-k="c5"><span class="txt"><span class="when">30분 전</span>촬영 담당자와 촬영 범위·시작 시점 협의, 좌석 촬영 제외 확인</span></label></li>
+      <li><label><input type="checkbox" data-k="c6"><span class="txt"><span class="when">10분 전</span>FAQ 사전 질문 1~2개 준비(질문이 없을 때 투입용)</span></label></li>
+      <li><label><input type="checkbox" data-k="c7"><span class="txt"><span class="when">진행 중</span>각 순서 시작·종료 시각을 시나리오 여백에 메모하여 지연 여부 실시간 관리</span></label></li>
+      <li><label><input type="checkbox" data-k="c8"><span class="txt"><span class="when">진행 중</span>질문자 소속·성함 복창, 답변 필요 사항은 별도 메모하여 사후 회신 목록 작성</span></label></li>
+    </ul>
+  </div>
+  <p class="foot">Ⅴ. 사회자 사전 점검 사항</p>
+</section>
+
+</main>
+
+<button id="top" type="button" aria-label="맨 위로"><svg viewBox="0 0 24 24"><path d="M12 19V5M5 12l7-7 7 7"/></svg></button>
+
+<nav role="tablist">
+  <button role="tab" id="t-script" aria-selected="true" aria-controls="p-script" data-p="p-script">
+    <svg viewBox="0 0 24 24"><path d="M4 4h13a2 2 0 0 1 2 2v14H6a2 2 0 0 1-2-2V4z"/><path d="M8 8h7M8 12h7M8 16h4"/></svg>대본
+  </button>
+  <button role="tab" id="t-run" aria-selected="false" aria-controls="p-run" data-p="p-run">
+    <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="8.5"/><path d="M12 7.5V12l3 2"/></svg>순서
+  </button>
+  <button role="tab" id="t-case" aria-selected="false" aria-controls="p-case" data-p="p-case">
+    <svg viewBox="0 0 24 24"><path d="M12 3l9 16H3l9-16z"/><path d="M12 9.5v4M12 16.5h.01"/></svg>대응
+  </button>
+  <button role="tab" id="t-check" aria-selected="false" aria-controls="p-check" data-p="p-check">
+    <svg viewBox="0 0 24 24"><path d="M4 6h4M4 12h4M4 18h4"/><path d="M11 6h9M11 12h9M11 18h9"/></svg>점검
+  </button>
+</nav>
+
+<script>
+(function(){
+  "use strict";
+  var LS = { get:function(k,d){try{var v=localStorage.getItem(k);return v===null?d:v}catch(e){return d}},
+             set:function(k,v){try{localStorage.setItem(k,v)}catch(e){}} };
+
+  /* ── 설정: 글자 크기 / 테마 ─────────────── */
+  var setBtn=document.getElementById('setBtn'), settings=document.getElementById('settings');
+  setBtn.addEventListener('click',function(){
+    var open=settings.classList.toggle('open');
+    setBtn.setAttribute('aria-expanded',open?'true':'false');
+  });
+
+  function applyFs(v){
+    document.documentElement.style.setProperty('--fs',v+'px');
+    [].forEach.call(document.querySelectorAll('#fsSeg button'),function(b){
+      b.setAttribute('aria-pressed', b.dataset.fs===String(v)?'true':'false');
+    });
+  }
+  var fs=LS.get('sc.fs','17'); applyFs(fs);
+  document.getElementById('fsSeg').addEventListener('click',function(e){
+    var b=e.target.closest('button'); if(!b) return;
+    applyFs(b.dataset.fs); LS.set('sc.fs',b.dataset.fs);
+  });
+
+  function applyTh(v){
+    if(v==='auto') document.documentElement.removeAttribute('data-theme');
+    else document.documentElement.setAttribute('data-theme',v);
+    [].forEach.call(document.querySelectorAll('#thSeg button'),function(b){
+      b.setAttribute('aria-pressed', b.dataset.th===v?'true':'false');
+    });
+  }
+  applyTh(LS.get('sc.th','auto'));
+  document.getElementById('thSeg').addEventListener('click',function(e){
+    var b=e.target.closest('button'); if(!b) return;
+    applyTh(b.dataset.th); LS.set('sc.th',b.dataset.th);
+  });
+
+  /* ── 탭 ─────────────────────────────────── */
+  var tabs=[].slice.call(document.querySelectorAll('nav button')), pos={};
+  function show(id,push){
+    var cur=document.querySelector('.panel.on');
+    if(cur){ pos[cur.id]=window.scrollY; }
+    tabs.forEach(function(t){
+      var on=t.dataset.p===id;
+      t.setAttribute('aria-selected',on?'true':'false');
+      var p=document.getElementById(t.dataset.p);
+      p.classList.toggle('on',on); p.hidden=!on;
+    });
+    settings.classList.remove('open'); setBtn.setAttribute('aria-expanded','false');
+    window.scrollTo(0,pos[id]||0);
+    LS.set('sc.tab',id);
+  }
+  tabs.forEach(function(t){ t.addEventListener('click',function(){ show(t.dataset.p); }); });
+  show(LS.get('sc.tab','p-script'));
+
+  /* ── 대본 퀵점프 칩 ─────────────────────── */
+  var blks=[].slice.call(document.querySelectorAll('.blk')), chips=document.getElementById('chips');
+  blks.forEach(function(b){
+    var btn=document.createElement('button');
+    btn.type='button';
+    btn.textContent=b.querySelector('.tm').textContent.split('~')[0]+' '+b.querySelector('.ttl').textContent;
+    btn.dataset.t=b.id;
+    btn.addEventListener('click',function(){
+      b.scrollIntoView({behavior:'smooth',block:'start'});
+    });
+    chips.appendChild(btn);
+  });
+
+  /* ── 현재 시각 · 진행중 순서 표시 ───────── */
+  var clock=document.getElementById('clock');
+  var tlis=[].slice.call(document.querySelectorAll('#tl li'));
+  function tick(){
+    var d=new Date(), h=d.getHours(), m=d.getMinutes();
+    clock.textContent=(h<10?'0':'')+h+':'+(m<10?'0':'')+m;
+    var now=h*60+m;
+    function mark(el,arr){
+      var f=+el.dataset.from, t=+el.dataset.to;
+      var live=now>=f&&now<t;
+      el.classList.toggle('live',live);
+      el.classList.toggle('past',now>=t);
+      return live;
+    }
+    var liveId=null;
+    blks.forEach(function(b){ if(mark(b)) liveId=b.id; });
+    tlis.forEach(function(l){ mark(l); });
+    [].forEach.call(chips.children,function(c){ c.classList.toggle('live',c.dataset.t===liveId); });
+  }
+  tick(); setInterval(tick,15000);
+  document.addEventListener('visibilitychange',function(){ if(!document.hidden) tick(); });
+
+  /* ── 점검 체크리스트 ────────────────────── */
+  var boxes=[].slice.call(document.querySelectorAll('#ck input')),
+      fill=document.getElementById('ckFill'), cnt=document.getElementById('ckCnt');
+  function sync(){
+    var n=boxes.filter(function(b){return b.checked}).length;
+    fill.style.width=(n/boxes.length*100)+'%';
+    cnt.textContent=n+' / '+boxes.length;
+  }
+  boxes.forEach(function(b){
+    b.checked = LS.get('sc.'+b.dataset.k,'0')==='1';
+    b.addEventListener('change',function(){ LS.set('sc.'+b.dataset.k,b.checked?'1':'0'); sync(); });
+  });
+  sync();
+  document.getElementById('ckReset').addEventListener('click',function(){
+    boxes.forEach(function(b){ b.checked=false; LS.set('sc.'+b.dataset.k,'0'); });
+    sync();
+  });
+
+  /* ── 맨 위로 ────────────────────────────── */
+  var topBtn=document.getElementById("top");
+  topBtn.addEventListener("click",function(){ window.scrollTo({top:0,behavior:"smooth"}); });
+  var ticking=false;
+  window.addEventListener('scroll',function(){
+    if(ticking) return; ticking=true;
+    requestAnimationFrame(function(){ topBtn.classList.toggle("show",window.scrollY>420); ticking=false; });
+  },{passive:true});
+})();
+</script>
+</body>
+</html>
